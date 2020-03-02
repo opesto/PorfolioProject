@@ -56,44 +56,29 @@
           <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link" href="https://github.com/opesto">Github</a>
             <a class="nav-item nav-link" href="{% static 'Resume.pdf' %}">Resume</a>
-            <a class="nav-item nav-link" href="{% url 'allBlogs' %}">Blog</a>
+            <a class="nav-item nav-link active" href="{% url 'allBlogs' %}">Blog</a>
           </div>
         </div>
       </nav>
     </header>
 
 <main role="main">
-
-  <section class="jumbotron text-center">
     <div class="container">
-      <h1>Hi, I'm Olivier</h1>
-      <p class="lead text-muted">Hey, I'm Olivier Preston and I love to build Django websites. Please explore this website built by me with Django.</p>
-      <p>
-        <a href="mailto:opreston@ualberta.ca" class="btn btn-primary my-2">Email Me</a>
-      </p>
-      <img height="400" src="{% static 'Olivier.jpeg' %}"/>
-    </div>
-  </section>
+        <h1 class="text-center pt-3">Welcome to Olivier's Blog</h1>
+        <br />
+        <h2>Latest Posts</h2>
+        <hr />
 
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row">
-
-        {% for job in jobs.all %}
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="{{ job.image.url }}">
-            <div class="card-body">
-              <p class="card-text">{{ job.summary }}</p>
-            </div>
-          </div>
-        </div>
+        {% for blogPost in blogPosts.all %}
+        <a href="{% url 'detail' blogPost.id %}"><h3>{{ blogPost.title }}</h2></a>
+        {{ blogPost.summary }}
+        <br />
+        {{ blogPost.datePretty }}
+        <br />
+        <img class="img-fluid" src="{{ blogPost.image.url }}" height=100 width=100 />
         {% endfor %}
-
-      </div>
+        
     </div>
-  </div>
 
 </main>
 
