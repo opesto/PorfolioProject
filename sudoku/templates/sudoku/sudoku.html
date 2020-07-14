@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Album example · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+
+  <link rel="stylesheet" type="text/css" href={% static "sudoku/blah.css" %}/>
+
+<style>
+body, html {
+  height: 100%;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("{% static "sudoku/retroBackground.jpg" %}");
+  height: 100%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 5%;
+  width: 100%;
+  color: #000;
+}
+
+.caption2 {
+  position: absolute;
+  left: 0;
+  top: 5%;
+  color: #000;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url 'home' %}">Olivier Preston</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <a class="nav-item nav-link" href="https://www.linkedin.com/in/olivier-preston-27a099148/">LinkedIn</a>
+        <a class="nav-item nav-link" href="https://github.com/opesto">Github</a>
+        <a class="nav-item nav-link" href="{% static 'Resume.pdf' %}">Resume</a>
+        <a class="nav-item nav-link" href="{% url 'allBlogs' %}">Blog</a>
+        <a class="nav-item nav-link active" href="{% url 'sudoku' %}">DokuDisco</a>
+        <a class="nav-item nav-link" href="{% url 'travel' %}">Adventure</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="bgimg-1"> 
+  <div class="caption" id="app">
+  </div>
+  <div class="caption2">
+    <iframe src="https://open.spotify.com/embed/playlist/0TCtFMz5lY6jTfusk66ZFj" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  </div>
+</div>
+<script src="{% static "sudoku/main.js" %}"></script>
+</body>
+</html>
+
+

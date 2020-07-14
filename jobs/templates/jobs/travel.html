@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Album example · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <link rel="stylesheet" href="travel.css" type="text/css">
+
+
+    <style>
+      .overlay {
+          position:absolute;
+          top: 135px;
+          bottom: 190px;
+          left: 0;
+          right: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-family: "Helvetica Neue";
+      }
+
+        .videoContainer {
+        width: 100%;
+        height: 800px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .video {
+        /* optional */
+            height: 800px;
+            width: 100%;
+        }
+      
+      footer {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+      
+      footer p {
+        margin-bottom: .25rem;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'home' %}">Olivier Preston</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="https://www.linkedin.com/in/olivier-preston-27a099148/">LinkedIn</a>
+            <a class="nav-item nav-link" href="https://github.com/opesto">Github</a>
+            <a class="nav-item nav-link" href="{% static 'Resume.pdf' %}">Resume</a>
+            <a class="nav-item nav-link" href="{% url 'allBlogs' %}">Blog</a>
+            <a class="nav-item nav-link" href="{% url 'sudoku' %}">Sudoku</a>
+            <a class="nav-item nav-link active" href="{% url 'travel' %}">Adventure</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+			    <div class='videoContainer' id="YouTubeBackgroundVideoPlayer">
+                    <iframe class="video" id="video" width="1920" height="1080" src="https://www.youtube.com/embed/videoseries?list=PLgBWubxpuAg4f8D0TuZthLqmACA3uMCT5&mute=1&autoplay=1&autohide=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
+		        </div>
+                <div class="overlay">
+                    <h1>Adventure</h1>
+                </div>
+    {% comment %} <script>
+        function onYouTubeIframeAPIReady() {
+        var player;
+        player = new YT.Player('YouTubeBackgroundVideoPlayer', {
+            videoId: 'fyYN3qVNyJI', // YouTube Video ID
+            width: 1280,               // Player width (in px)
+            height: 720,    
+            allowFullScreen,          // Player height (in px)
+            playerVars: {
+                playlist: '{$loadYouTubeVideoID}',
+                autoplay: 1,        // Auto-play the video on load
+                autohide: 1,
+                disablekb: 1, 
+                controls: 0,        // Hide pause/play buttons in player
+                showinfo: 0,        // Hide the video title
+                modestbranding: 1,  // Hide the Youtube Logo
+                loop: 1,            // Run the video in a loop
+                fs: 0,              // Hide the full screen button
+                autohide: 0,         // Hide video controls when playing
+                rel: 0,
+                enablejsapi: 1
+            },
+            events: {
+                onReady: function(e) {
+                    e.target.mute();
+                    e.target.setPlaybackQuality('hd1080');
+                },
+                onStateChange: function(e) {
+                if(e && e.data === 1){
+                    var videoHolder = document.getElementById('home-banner-box');
+                    if(videoHolder && videoHolder.id){
+                        videoHolder.classList.remove('loading');
+                    }
+                }else if(e && e.data === 0){
+                    e.target.playVideo();
+                }
+                }
+            }
+        });
+        }
+</script> {% endcomment %}
+<script async src="https://www.youtube.com/iframe_api"></script>
+<script async src="video.js"></script>
+
+<main role="main">
+
+<div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src="/ media/images/gearBikeTrip.jpeg">
+            <div class="card-body">
+              <p class="card-text">Georgian Bay - 8 day bike trip from Toronto to Dyer's Bay</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">May 2020</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src="/ media/images/nepalCrew.jpeg">
+            <div class="card-body">
+              <p class="card-text">Nepal - 12 days of trecking along the Annapurna circuit</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">July 2017</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src="/ media/images/keyMonastery.jpeg">
+            <div class="card-body">
+              <p class="card-text">India</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">June-July 2017</small>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<footer class="text-muted">
+  <div class="container text-center">
+    <p>
+      © Olivier Preston {% now "Y" %}
+    </p>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      
+      <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script></body>
+</html>

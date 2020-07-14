@@ -8,4 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', jobs.views.home, name='home'),
     path('blog/', include('blog.urls')),
+    path('travel/', jobs.views.travel, name="travel"),
+    path('vanBuild/', jobs.views.vanBuild, name="vanBuild"),
+    path('sudoku/', include('sudoku.urls'), name='sudoku'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
