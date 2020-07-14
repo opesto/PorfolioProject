@@ -82,7 +82,7 @@
             <a class="nav-item nav-link" href="https://github.com/opesto">Github</a>
             <a class="nav-item nav-link" href="{% static 'Resume.pdf' %}">Resume</a>
             <a class="nav-item nav-link" href="{% url 'allBlogs' %}">Blog</a>
-            <a class="nav-item nav-link" href="{% url 'sudoku' %}">Sudoku</a>
+            <a class="nav-item nav-link" href="{% url 'sudoku' %}">DiscoDoku</a>
             <a class="nav-item nav-link active" href="{% url 'travel' %}">Adventure</a>
           </div>
         </div>
@@ -147,7 +147,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="/ media/images/gearBikeTrip.jpeg">
+            <img class="card-img-top" src="{% static 'gearBikeTrip.jpeg'%}">
             <div class="card-body">
               <p class="card-text">Georgian Bay - 8 day bike trip from Toronto to Dyer's Bay</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -159,7 +159,7 @@
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="/ media/images/nepalCrew.jpeg">
+            <img class="card-img-top" src="{% static 'nepalCrew.jpeg'%}">
             <div class="card-body">
               <p class="card-text">Nepal - 12 days of trecking along the Annapurna circuit</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -171,7 +171,7 @@
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="/ media/images/keyMonastery.jpeg">
+            <img class="card-img-top" src="{% static 'keyMonastery.jpeg'%}">
             <div class="card-body">
               <p class="card-text">India</p>
               <div class="d-flex justify-content-between align-items-center">
