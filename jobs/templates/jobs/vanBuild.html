@@ -152,6 +152,7 @@
             <a class="nav-item nav-link" href="{% url 'allBlogs' %}">Blog</a>
             <a class="nav-item nav-link" href="{% url 'sudoku' %}">DiscoDoku</a>
             <a class="nav-item nav-link" href="{% url 'travel' %}">Adventure</a>
+            <a class="nav-item nav-link active" href="{% url 'vanBuild' %}">Van Project</a>
           </div>
         </div>
       </nav>
@@ -213,8 +214,8 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading"><span class="text-muted">Gutting the van</span></h2>
+        <p class="lead">After removing the carpet, I found this sound deadening material on the van floor which had already started to peel off. So I got to work and chiseled it all off.</p>
       </div>
       <div class="col-md-5">
         <img class="card-img-top" src="{% static 'vanPart1.jpeg'%}">
@@ -225,8 +226,8 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading"><span class="text-muted">Painting</span></h2>
+        <p class="lead">Painted the floor to prevent future rust problems.</p>
       </div>
       <div class="col-md-5 order-md-1">
         <img class="card-img-top" src="{% static 'vanPart2.jpeg'%}">
@@ -237,8 +238,8 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading"><span class="text-muted">Floor Insulation</span></h2>
+        <p class="lead">I cut out 1 inch polysio foam board to fit around the floor ridges. Afterwards, I cut out 1/2 inch foam board pieces to fit inside the 1 inch cutout over the ridges. This was probably overkill, but the project was fresh and I was striving for perfection.</p>
       </div>
       <div class="col-md-5">
         <img class="card-img-top" src="{% static 'vanPart3.jpeg'%}">
@@ -249,22 +250,10 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading"><span class="text-muted">Subfloor</span></h2>
+        <p class="lead">Cut out 1/4 inch pine plywood to shape.</p>
       </div>
       <div class="col-md-5 order-md-1">
-        <img class="card-img-top" src="{% static 'vanPart4.jpeg'%}">
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-        <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-      </div>
-      <div class="col-md-5">
         <img class="card-img-top" src="{% static 'vanPart5.jpeg'%}">
       </div>
     </div>
@@ -272,9 +261,9 @@
     <hr class="featurette-divider">
 
     <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      <div class="col-md-7">
+        <h2 class="featurette-heading"><span class="text-muted">Ceiling insulation</span></h2>
+        <p class="lead">Stuck 1 inch polysio foam board to the ceiling and filled gaps with 'Great Stuff Gap Filler'.</p>
       </div>
       <div class="col-md-5 order-md-1">
         <img class="card-img-top" src="{% static 'vanPart6.jpeg'%}">
@@ -284,20 +273,8 @@
     <hr class="featurette-divider">
 
     <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-      </div>
-      <div class="col-md-5">
-        <img class="card-img-top" src="{% static 'vanPart7.jpeg'%}">
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <h2 class="featurette-heading"><span class="text-muted"></span></h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
       <div class="col-md-5 order-md-1">
@@ -309,7 +286,7 @@
 
         <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <h2 class="featurette-heading"><span class="text-muted"></span></h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
       <div class="col-md-5">
@@ -321,7 +298,7 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <h2 class="featurette-heading"><span class="text-muted"></span></h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
       <div class="col-md-5 order-md-1">

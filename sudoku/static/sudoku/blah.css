@@ -142,15 +142,29 @@
   }
   
   .undoButton {
-    margin-top: -5px;
+    margin-top: 5px;
     height: 30px;
     width: 65px;
     font-size: 15px;
     border-radius: 3px;
     border: solid 2px;
+    border-color: rgb(48, 202, 34);
+    color:  rgb(48, 202, 34);
+
   }
 
   #container {
     text-align: center;
+  }
+
+  .switch {
+    border: solid 2px;
+    border-color:  rgb(48, 202, 34);
+    color:  rgb(48, 202, 34);
+    margin-top: 10px;
+  }
+
+  .hintText {
+    color:  rgb(48, 202, 34);
   }
   

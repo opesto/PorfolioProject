@@ -380,7 +380,8 @@ class BoardComponent extends React.Component {
         </div>
         <div className="buttons">
           <button className="undoButton" onClick={() => this.undoMove()}>Undo</button>
-          <Switch className="switch" onChange={this.handleHint} checked={this.state.isHintButtonPressed}/>
+          <br></br>
+          <span className="hintText">Hint! </span><Switch className="switch" onChange={this.handleHint} checked={this.state.isHintButtonPressed}/>
           </div>
       </React.Fragment>
     );

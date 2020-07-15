@@ -202,7 +202,7 @@ function buildPuzzle () {
   
   //Generate a Fully Solved Grid
   fillGrid(sudokuBoard, numberList);
-  var attempts = 5; 
+  var attempts = 30; 
   
   while (attempts > 0) {
     //Select a random cell that is not already empty
@@ -224,7 +224,6 @@ function buildPuzzle () {
     //If the number of solution is different from 1 then we need to cancel the change by putting the value we took away back in the grid
     if (counter!=1) {
       sudokuBoard[row][col]=backup;
-      console.log('yaaaaay');
       //We could stop here, but we can also have another attempt with a different cell just to try to remove more numbers
       attempts -= 1;
     } else {
