@@ -31,9 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'sudoku.apps.SudokuConfig',
     'jobs.apps.JobsConfig',
     'blog.apps.BlogConfig',
-    'sudoku.apps.SudokuConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
