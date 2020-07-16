@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
 def sudoku(request):
-    return render(request, 'sudoku/sudoku.html')
+    return render(request, 'sudoku.html')
